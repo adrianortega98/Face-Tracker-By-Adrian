@@ -1,0 +1,68 @@
+:root {
+  --whiteish: #e5e5e5;
+  --backgroundSize: 1920px;
+  --bposx-p: 0;
+  --bposy-p: 0;
+  --bposx-d: 0;
+  --bposy-d: 0;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  overflow: hidden;
+  height: 100vh;
+  background: black;
+  font-family: 'Pacifico', Georgia, Times, 'Times New Roman', serif;
+  background-image: url(Earth.jpg);
+  background-size: var(--backgroundSize);
+
+  color: var(--whiteish);
+  display: grid;
+  place-items: center;
+}
+
+video {
+  position: fixed;
+  opacity: 0.3;
+  width: 50vw;
+  top: calc(50% + var(--bposy-p));
+  right: calc(50% + (var(--bposx-p) * 1));
+  transform: translate(50%, -50%);
+  border-radius: 5%;
+  box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.5);
+}
+
+.box {
+  position: fixed;
+  border-radius: 5%;
+  opacity: 0.8;
+  transform: translate(50%, -50%) rotateX(var(--bposx-d)) rotateY(var(--bposy-d));
+}
+
+#box1 {
+  width: 30vw;
+  height: 30vw;
+  background: rgb(69, 158, 231);
+  top: calc(50% + (var(--bposy-p) * 1));
+  right: calc(50% + (var(--bposx-p) * 1));
+  box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.5);
+}
+
+#box2 {
+  width: 20vw;
+  height: 20vw;
+  background: rgb(255, 56, 56);
+  top: calc(50% + (var(--bposy-p) * 50));
+  right: calc(50% + (var(--bposx-p) * 50));
+  box-shadow: 0px 5px 40px 10px rgba(0, 0, 0, 0.8);
+}
+
+#box3 {
+  width: 10vw;
+  height: 10vw;
+  background: rgb(255, 255, 255);
+  top: calc(50% + (var(--bposy-p) * 100));
+  right: calc(50% + (var(--bposx-p) * 100));
+  box-shadow: 0px 5px 80px 10px rgba(0, 0, 0, 1);
+}
